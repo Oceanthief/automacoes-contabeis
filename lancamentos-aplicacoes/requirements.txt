@@ -1,0 +1,6 @@
+openpyxl>=3.1
+xlrd>=2.0,<3   # lê o .xls do extrato (xlrd 2.x só lê .xls, que é o que precisamos)
+
+# desenvolvimento / dados de exemplo
+xlwt>=1.3
+pytest>=8
