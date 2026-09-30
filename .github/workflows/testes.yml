@@ -1,0 +1,25 @@
+name: testes
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        projeto: [conciliacao-bancaria, classificacao-extrato, lancamentos-aplicacoes]
+    defaults:
+      run:
+        working-directory: ${{ matrix.projeto }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: ${{ matrix.projeto }}/requirements.txt
+      - run: pip install -r requirements.txt
+      - run: pytest -v

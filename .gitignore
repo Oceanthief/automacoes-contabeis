@@ -1,0 +1,37 @@
+# ============================================================
+# DADOS REAIS DE CLIENTES NUNCA ENTRAM NESTE REPOSITÓRIO.
+# Só os arquivos fictícios de dados_exemplo/ são versionados.
+# ============================================================
+
+# Planilhas, extratos e saídas em qualquer lugar...
+*.xls
+*.xlsx
+*.csv
+*.txt
+*.docx
+*.pdf
+# ...exceto os dados fictícios e os requirements
+!**/dados_exemplo/**
+!**/requirements.txt
+
+# Pastas de trabalho do dia a dia
+**/input/
+**/output/
+**/saida/
+
+# Configuração com dados reais do cliente
+.env
+**/configuracoes_locais.py
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Sistema / Office
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
